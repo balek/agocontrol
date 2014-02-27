@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="script.agoxbmc" name="AgoXBMC" version="0.1" provider-name="Alexey Balekhov">
+<addon id="script.agoxbmc" name="AgoXBMC" version="0.1.0" provider-name="Alexey Balekhov">
     <requires>
         <import addon="xbmc.python" version="2.0"/>
     </requires>
