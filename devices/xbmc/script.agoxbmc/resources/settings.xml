@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings>
+    <category label="30001">
+    	<setting label="30002" type="text" id="broker" default="localhost" />
+        <setting label="30003" type="text" id="username" default="agocontrol"/>
+        <setting label="30004" type="text" id="password" option="hidden" default="letmein"/>
+    </category>
+</settings>
