@@ -20,7 +20,7 @@ class AgoDialog(AddonDialogWindow):
         self.connect(ACTION_MOVE_RIGHT, self.onMoveRight)
         self.connect(ACTION_NAV_BACK, self.close)
         
-        for event_type in ( 'event.device.announce',
+        for event_type in ( 'event.internal.newdevice',
                             'event.device.remove',
                             'event.system.devicenamechanged',
                             'event.system.roomnamechanged',

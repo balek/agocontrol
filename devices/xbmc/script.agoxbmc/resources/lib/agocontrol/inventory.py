@@ -106,6 +106,7 @@ class AgoInventory(AgoEventHandler):
             self.devices.append(device)
             if device.room:
                 device.room.devices.add(device)
+            self.event_callback('event.internal.newdevice', uuid=uuid, **props)
 
     def add_room(self, uuid, props):
         room = self.create_room(uuid, props)
