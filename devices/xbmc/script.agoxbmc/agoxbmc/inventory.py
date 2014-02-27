@@ -98,5 +98,5 @@ class Inventory(AgoInventory):
             if 'off' in commands:
                 if 'setlevel' in commands:
                     return SetLevelDevice(self.connection, uuid, props)
-            return OnOffDevice(self.connection, uuid, props)
-        return OnDevice(self.connection, uuid, props)
+                return OnOffDevice(self.connection, uuid, props)
+            return OnDevice(self.connection, uuid, props)
