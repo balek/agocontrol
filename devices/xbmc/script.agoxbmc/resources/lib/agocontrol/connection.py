@@ -37,7 +37,7 @@ class AgoConnection(object):
         
     def open(self):
         logger.info('connecting to broker %s with username %s', self.broker, self.username)
-        self.connection = Connection(self.broker, username=self.username, password=self.password, reconnect=False)
+        self.connection = Connection(self.broker, username=self.username, password=self.password, reconnect=True)
         self.connection.open()
         self.session = self.connection.session()
         self.receiver = self.session.receiver('agocontrol; {create: always, node: {type: topic}}')
