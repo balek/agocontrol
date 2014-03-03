@@ -35,6 +35,9 @@ class XBMCLogHandler(logging.Handler):
 class XBMCJSONRPCClient(RPCClient):
     class Request(RPCClient.Request):
         def dispatch_notification(self, subject):
+            if subject['method'] == 'System.OnQuit':
+                xbmc_jsonrpc_service.shutdown()
+                return
             if subject['method'] != 'Other.AgoXBMC':
                 return
             data = subject['params']['data']
@@ -76,7 +79,7 @@ try:
                                                                     'VideoLibrary': False,
                                                                     'AudioLibrary': False,
                                                                     'Playlist': False,
-                                                                    'System': False,
+                                                                    'System': True,
                                                                     'Player': False,
                                                                     'Application': False,
                                                                     'PVR': False,
